@@ -103,7 +103,7 @@
             padding-left: 15px;
         }
         
-        /* --- Hero Section (A Structured Introduction) --- */
+        /* --- Hero Section --- */
         #about {
             display: flex; 
             flex-direction: row; 
@@ -162,7 +162,7 @@
             text-transform: uppercase;
         }
 
-        /* --- Experience & Project Cards --- */
+        /* --- Item Cards --- */
         .item-card {
             background: var(--card-background);
             padding: 25px;
@@ -276,7 +276,7 @@
             <a href="#about" class="logo">Snaholata Mondal</a>
             <ul>
                 <li><a href="#about">Profile</a></li>
-                <li><a href="#experience">Education & Experience</a></li>
+                <li><a href="#experience">Education & Teaching</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -292,7 +292,7 @@
             <div class="content">
                 <h1>Snaholata Mondal</h1>
                 <p style="font-family: var(--font-serif); font-style: italic; color: #555;">Lecturer in Computer Science and Engineering | IUBAT</p>
-                <p>An academic researcher and educator focused on expanding boundaries in Computer Science and Engineering. Deeply focused in healthcare driven computing, deep learning and intelligent architectures. Actively exploring enhanced medical image segmentation and framework dependability optimization.</p>
+                <p>An academic researcher and educator focused on expanding boundaries in Computer Science and Engineering. Deeply focused in healthcare-driven computing, deep learning, and intelligent architectures. Actively exploring enhanced medical image segmentation and framework dependability optimization.</p>
                 <div class="contact-info">
                     <a href="mailto:snaholata.cse@iubat.edu">Email</a> | 
                     <a href="https://www.linkedin.com/in/snaholata-m/" target="_blank">LinkedIn</a> | 
@@ -305,14 +305,21 @@
         </section>
 
         <section id="experience">
-            <h2>Education & Experience</h2>
+            <h2>Education & Teaching Experience</h2>
             
-            <h3>Professional Experience</h3>
+            <h3>Teaching Experience</h3>
             <div class="item-card">
                 <h3>Lecturer, Department of Computer Science and Engineering</h3>
                 <span class="meta">International University of Business Agriculture and Technology (IUBAT) | August 2023 &mdash; Present</span>
+                <p><strong>Courses Taught:</strong></p>
+                <p class="tags">
+                    <a href="#">Electronics Analysis and Design</a>
+                    <a href="#">System Analysis and Design</a>
+                    <a href="#">Operating Systems</a>
+                    <a href="#">Database Management Systems</a>
+                    <a href="#">Software Engineering</a>
+                </p>
                 <ul>
-                    <li>Instruct core undergraduate courses, including Operating Systems, Database Management Systems, and Software Engineering.</li>
                     <li>Supervise undergraduate thesis tracks and technical research projects.</li>
                     <li>Provide ongoing guidance on career tracks, academic milestones, and semester choices.</li>
                 </ul>
@@ -321,21 +328,27 @@
             <h3>Academic Background</h3>
             <div class="item-card">
                 <h3>M.Sc. in Computer Science and Engineering</h3>
-                <span class="meta">Military Institute of Science and Technology (MIST) | CGPA: 3.83/4.00 (Final Semester: 4.00/4.00) | April 2025-Ongoing </span>
-                <p><strong>Thesis:</strong> <em>EAM-Mamba: Edge-Aware Multi-Axial Mamba for Efficient Skin Lesion Segmentation</em></p>
+                <span class="meta">Military Institute of Science and Technology (MIST) | CGPA: 3.83/4.00 (Last Semester: 4.00/4.00) | April 2025 &mdash; Ongoing</span>
+                <p><strong>Thesis:</strong> <em>ADVANCED DEEP LEARNING TECHNIQUES FOR SKIN LESION SEGMENTATION: AN EDGE-AWARE MULTI-AXIAL MAMBA APPROACH</em></p>
             </div>
 
             <div class="item-card">
                 <h3>B.Sc. in Computer Science and Engineering</h3>
-                <span class="meta">Chittagong University of Engineering and Technology (CUET) | CGPA: 3.75/4.00 (Final Semester: 3.95/4.00) | January 2018-June 2023</span>
+                <span class="meta">Chittagong University of Engineering and Technology (CUET) | CGPA: 3.75/4.00 (Last Semester: 3.95/4.00) | Completed: May 2023</span>
             </div>
             
+            <h3>Leadership & Activities</h3>
+            <div class="item-card">
+                <h3>Joint General Secretary</h3>
+                <span class="meta">CUET Computer Club | May 2022 &mdash; May 2023</span>
+            </div>
         </section>
 
         <section id="publications">
             <h2>Research & Publications</h2>
-            <p style="margin-bottom: 25px; font-style: italic; color: #555;">Track Record: 35+ Citations | h-index: 4 (Google Scholar)</p>
+            <p style="margin-bottom: 25px; font-style: italic; color: #555;">Track Record: 42 Citations | h-index: 4 (Google Scholar)</p>
 
+            <!-- Published -->
             <div class="item-card">
                 <h3><span class="pub-status status-published">Published</span> "A Framework to Estimate Classroom Occupancy using WiFi Channel State Information"</h3>
                 <span class="meta">2023 26th International Conference on Computer and Information Technology (ICCIT) | S. Mondal, Asaduzzaman</span>
@@ -369,7 +382,7 @@
             <div class="item-card">
                 <h3><span class="pub-status status-published">Published</span> "Automated Detection of Religious Aggression in Bengali Social Media: A Comparative Study of Machine Learning, Deep Learning, and Transformer Approaches"</h3>
                 <span class="meta">2026 5th International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE) | A. Rakin, M. I. Ahamed, A. A. Rimi, S. Mondal</span>
-                <span class="meta">DOI: 10.1109/ICЕСТЕ69292.2026.11429234</span>
+                <span class="meta">DOI: 10.1109/ICECTE69292.2026.11429234</span>
             </div>
 
             <div class="item-card">
@@ -384,9 +397,20 @@
                 <span class="meta">DOI: 10.1109/WIECON-ECE69386.2025.11525929</span>
             </div>
 
+            <!-- Accepted -->
+            <div class="item-card">
+                <h3><span class="pub-status status-accepted">Accepted</span> "Enhanced Cardiovascular Disease Prediction Using Advanced Ensemble Learning with Iterative SMOTE and Clinical Feature Engineering"</h3>
+                <span class="meta">Artificial Intelligence & Machine Learning Conference (AIM-2027), Orlando, FL | S. Mondal, T. Mujumder</span>
+            </div>
+
             <div class="item-card">
                 <h3><span class="pub-status status-accepted">Accepted</span> "Automated Dermoscopic Skin Lesion Segmentation via Attention-Based U-Net Refinement"</h3>
                 <span class="meta">Taylor & Francis Book Chapter (2026) | S. Mondal, T. M. S. Sazzad</span>
+            </div>
+
+            <div class="item-card">
+                <h3><span class="pub-status status-accepted">Accepted</span> "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks"</h3>
+                <span class="meta">IEEE SPICSCON (2026) | S. Mondal, M. J. N. Rakib, F. Muntasir</span>
             </div>
 
             <div class="item-card">
@@ -404,21 +428,13 @@
                 <span class="meta">Springer Nature (2026) | D. M. Das, S. Mondal</span>
             </div>
 
-            <div class="item-card">
-                <h3><span class="pub-status status-review">Under Review</span> "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks"</h3>
-                <span class="meta">IEEE SPICSCON (2026) | S. Mondal, M. J. N. Rakib, F. Muntasir</span>
-            </div>
-
+            <!-- Under Review -->
             <div class="item-card">
                 <h3><span class="pub-status status-review">Under Review</span> "A HEART Framework-Based Comparative Analysis of UX in Generative and Traditional Search Across Gen Z and Older Adults"</h3>
-                <span class="meta">IFIP I3E (2026) | A. Kabir, S. Mondal, N. Azad, M. N. Islam</span>
+                <span class="meta">ICSOB 2026 (17th International Conference on Software Business) | A. Kabir, S. Mondal, N. Azad, M. N. Islam</span>
             </div>
 
-            <div class="item-card">
-                <h3><span class="pub-status status-progress">In Progress</span> "Enhanced Cardiovascular Disease Prediction Using Advanced Ensemble Learning with Iterative SMOTE and Clinical Feature Engineering"</h3>
-                <span class="meta">Ongoing Research Track | S. Mondal, T. Mujumder, Moniruzzaman</span>
-            </div>
-
+            <!-- In Progress -->
             <div class="item-card">
                 <h3><span class="pub-status status-progress">In Progress</span> "Hierarchical Deep Learning for Multiclass Cyber Threat Identification in IoMT"</h3>
                 <span class="meta">Ongoing Research Track | S. Mondal, M. R. Hasan</span>
@@ -442,13 +458,19 @@
             <div class="item-card">
                 <h3>Real-Time Sudoku Solver</h3>
                 <span class="meta">Core Technologies: Python, OpenCV, NumPy</span>
-                <p>An AI-driven solution that dynamically tracks and processes Sudoku structures via a live webcam stream. Built with algorithmic array tracking and real-time backtracking matrices to project numeric outputs directly over source frames.</p>
+                <p>The AI-based Sudoku solver captures a puzzle from a webcam, uses image processing to detect digits, solves the puzzle using a backtracking algorithm, and overlays the solution on the original image using OpenCV.</p>
             </div>
 
             <div class="item-card">
                 <h3>Flash Chat</h3>
                 <span class="meta">Core Technologies: Flutter, Firebase</span>
-                <p>Designed and built a mobile application architecture implementing fast state syncing and Cloud Firestore backend handling. Outfitted with real-time payload streaming alongside secure, integrated login systems.</p>
+                <p>A messenger app incorporating real-time messaging, Firebase Authentication for user login, and Cloud Firestore (NoSQL) for data storage and sync to deliver a responsive chat experience.</p>
+            </div>
+
+            <div class="item-card">
+                <h3>ShuvoBibaho</h3>
+                <span class="meta">Core Technologies: PHP, JavaScript, HTML, CSS, MySQL</span>
+                <p>A web platform for comprehensive wedding management, allowing users to discover and book venues, coordinate vendors, and organize event services with dynamic database queries.</p>
             </div>
         </section>
 
@@ -458,22 +480,28 @@
             <div class="item-card">
                 <h3>Languages & Databases</h3>
                 <p class="tags">
-                    <a href="#">C/C++</a><a href="#">Python</a><a href="#">Java</a><a href="#">Dart</a><a href="#">PHP</a><a href="#">JavaScript</a><a href="#">MySQL</a>
+                    <a href="#">Python</a><a href="#">C/C++</a><a href="#">Java</a><a href="#">Dart</a><a href="#">PHP</a><a href="#">JavaScript</a><a href="#">SQL (MySQL)</a>
                 </p>
             </div>
 
             <div class="item-card">
                 <h3>Frameworks & Libraries</h3>
                 <p class="tags">
-                    <a href="#">PyTorch</a><a href="#">TensorFlow</a><a href="#">Keras</a><a href="#">OpenCV</a><a href="#">Flutter</a><a href="#">Scikit-learn</a><a href="#">Pandas</a><a href="#">Matplotlib</a><a href="#">Seaborn</a><a href="#">LaTeX</a>
+                    <a href="#">PyTorch</a><a href="#">TensorFlow</a><a href="#">Keras</a><a href="#">OpenCV</a><a href="#">Scikit-learn</a><a href="#">Flutter</a><a href="#">Firebase</a>
                 </p>
             </div>
 
             <div class="item-card">
-                <h3>Certifications</h3>
-                <span class="meta">Coursera Credentials:</span>
+                <h3>Documentation & Tools</h3>
                 <p class="tags">
-                    <a href="#">Machine Learning Foundations</a><a href="#">Python Data Structures</a><a href="#">AI for Everyone</a><a href="#">Programming with IoT Boards</a>
+                    <a href="#">LaTeX</a><a href="#">Git</a><a href="#">GitLab/GitHub</a><a href="#">Jupyter Notebook</a>
+                </p>
+            </div>
+
+            <div class="item-card">
+                <h3>Data Science & Analytics</h3>
+                <p class="tags">
+                    <a href="#">Pandas</a><a href="#">NumPy</a><a href="#">Matplotlib</a><a href="#">Seaborn</a><a href="#">PIL</a><a href="#">SMOTE / Data Oversampling</a>
                 </p>
             </div>
         </section>
