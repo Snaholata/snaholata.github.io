@@ -1,529 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snaholata Mondal - Official Curriculum Vitae</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <style>
-        /* --- Classic Professional Aesthetic (Formal) --- */
-        :root {
-            --primary-color: #5d6d7e; /* Formal Slate Gray/Blue */
-            --secondary-color: #aeb6bf; /* Light Gray Accent */
-            --text-color: #333333;
-            --background-color: #f7f9fb; /* Very light background */
-            --card-background: #ffffff;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Open Sans', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-size: 16px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 0 25px;
-        }
-
-        /* --- Header & Navigation --- */
-        header {
-            background: var(--card-background);
-            border-bottom: 2px solid var(--secondary-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-        }
-
-        nav .logo {
-            font-family: var(--font-serif);
-            font-size: 1.8em;
-            font-weight: 900;
-            color: var(--primary-color);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            padding: 10px 18px;
-            display: block;
-            transition: color 0.3s, border-bottom 0.3s;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        /* --- Section Styling --- */
-        section {
-            padding: 80px 0 60px 0;
-            border-bottom: 1px dashed var(--secondary-color);
-        }
-        
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        h2 {
-            text-align: left;
-            color: var(--primary-color);
-            font-family: var(--font-serif);
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-        }
-        
-        /* --- Hero Section --- */
-        #about {
-            display: flex; 
-            flex-direction: row; 
-            align-items: center; 
-            gap: 40px; 
-            background: var(--card-background);
-            padding: 80px 40px;
-            margin-top: 30px;
-            border: 1px solid var(--secondary-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        #about .content {
-            flex-grow: 1; 
-        }
-
-        #about .profile-pic {
-            width: 180px; 
-            height: 180px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid var(--primary-color); 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #about h1 {
-            color: var(--text-color);
-            font-family: var(--font-serif);
-            font-size: 3em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        #about p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin-bottom: 25px;
-        }
-
-        .contact-info a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 20px;
-        }
-
-        .cta-button {
-            display: inline-block; 
-            padding: 10px 20px; 
-            background: var(--primary-color);
-            color: white; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            margin-top: 25px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* --- Item Cards --- */
-        .item-card {
-            background: var(--card-background);
-            padding: 25px;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 3px;
-            transition: box-shadow 0.3s;
-        }
-        
-        .item-card:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .item-card h3 {
-            margin-top: 0;
-            color: var(--text-color);
-            font-family: var(--font-serif);
-            font-size: 1.6em;
-            border-bottom: 1px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        .item-card .meta {
-            font-style: normal;
-            color: #777;
-            margin-bottom: 15px;
-            display: block;
-            font-size: 0.9em;
-        }
-
-        .item-card ul {
-            padding-left: 20px;
-            margin-top: 15px;
-        }
-
-        .item-card .tags a {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            padding: 5px 12px;
-            margin-right: 8px;
-            border-radius: 3px;
-            text-decoration: none;
-            font-size: 0.8em;
-            display: inline-block;
-            margin-top: 10px;
-            text-transform: capitalize;
-        }
-
-        .pub-status {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            padding: 2px 6px;
-            border-radius: 3px;
-            margin-right: 5px;
-        }
-        .status-published { background-color: #d4efdf; color: #196f3d; }
-        .status-accepted { background-color: #d6eaf8; color: #1f618d; }
-        .status-review { background-color: #fdebd0; color: #b9770e; }
-        .status-progress { background-color: #e5e7e9; color: #5d6d7e; }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 25px 0;
-            background: var(--primary-color);
-            color: white;
-            font-size: 0.9em;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 10px 20px;
-            }
-            nav ul {
-                margin-top: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav ul li a {
-                padding: 5px 10px;
-                font-size: 0.9em;
-            }
-            h2 {
-                font-size: 2em;
-                text-align: center;
-                border-left: none;
-                padding-left: 0;
-                border-bottom: 3px solid var(--primary-color);
-                width: 80%;
-                margin: 0 auto 30px auto;
-            }
-            #about {
-                flex-direction: column; 
-                text-align: center; 
-                padding: 40px 20px;
-            }
-            #about .profile-pic {
-                margin-bottom: 20px; 
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snaholata Mondal | Lecturer & Researcher, CSE</title>
+<meta name="description" content="Lecturer in CSE at IUBAT. Research in healthcare AI, privacy-preserving AI, cyber security, IoT and explainable AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f7;--surface:#fff;--ink:#12232b;--muted:#516670;--line:#d5e0e4;--teal:#0f5c6b;--rose:#c2386b;--rose-soft:rgba(194,56,107,.14)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1a20;--surface:#14262e;--ink:#e6eff2;--muted:#9bb2bb;--line:#26404a;--teal:#6cc3d3;--rose:#ee7ba2;--rose-soft:rgba(238,123,162,.18)}}
+:root[data-theme=dark]{--bg:#0d1a20;--surface:#14262e;--ink:#e6eff2;--muted:#9bb2bb;--line:#26404a;--teal:#6cc3d3;--rose:#ee7ba2;--rose-soft:rgba(238,123,162,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Spectral,Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+nav .brand{font:700 1.15rem Spectral,serif;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
+nav ul a:hover{color:var(--rose)}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:6px 12px;font:inherit}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:-.02em}
+.role{font:italic 400 1.3rem Spectral,serif;color:var(--teal);margin:10px 0 18px}
+.hero p{max-width:52ch;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;padding:9px 18px;border-radius:6px;border:1px solid var(--teal);color:var(--teal);text-decoration:none;font-weight:600;font-size:.92rem}
+.btn.main{background:var(--teal);color:var(--bg)}
+.btn:hover{border-color:var(--rose);color:var(--rose)}
+.btn.main:hover{background:var(--rose);color:#fff}
+.stats{display:flex;gap:28px;margin-top:28px;font-size:.9rem;color:var(--muted)}
+.stats b{display:block;font:700 1.6rem Spectral,serif;color:var(--ink)}
+.scan{position:relative;aspect-ratio:1;max-width:400px;margin-left:auto;width:100%}
+.scan svg{width:100%;height:100%;display:block}
+.scan img{position:absolute;inset:18% 22%;width:56%;height:64%;object-fit:cover;border-radius:50% 50% 46% 54%/55% 45% 55% 45%}
+.mask{fill:var(--rose-soft);stroke:var(--rose);stroke-width:2.5;stroke-dasharray:6 5;animation:draw 2.2s ease-out both}
+@keyframes draw{from{stroke-dashoffset:300;fill-opacity:0}to{stroke-dashoffset:0;fill-opacity:1}}
+@media(prefers-reduced-motion:reduce){.mask{animation:none}html{scroll-behavior:auto}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:2rem;margin-bottom:28px}
+section h3{font-size:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin-bottom:16px}
+.meta{color:var(--muted);font-size:.9rem;margin:4px 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{font-size:.82rem;padding:3px 11px;border-radius:99px;background:var(--rose-soft);color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two .card{margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{font:500 .88rem "Public Sans",sans-serif;padding:6px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--teal);color:var(--bg);border-color:var(--teal)}
+.pub{display:grid;grid-template-columns:104px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border:0}
+.status{font-size:.8rem;font-weight:600;color:var(--teal)}
+.status.Accepted{color:var(--rose)}
+.status.Under,.status.In{color:var(--muted)}
+.pub h3{font-size:1.05rem;font-weight:600}
+.pub p{margin:4px 0 0;font-size:.9rem;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.skills .card{margin:0}
+.skills h3{font-size:1.05rem;margin-bottom:10px}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media(max-width:760px){
+ .hero .wrap,.two{grid-template-columns:1fr}.scan{margin:0 auto;max-width:300px;order:-1}
+ #menu{display:block}nav ul{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+ nav ul.open{display:flex}nav ul a{display:block;padding:12px 24px}
+ .pub{grid-template-columns:1fr;gap:4px}}
+</style>
 </head>
 <body>
+<nav><div class="wrap">
+ <a class="brand" href="#top">Snaholata Mondal</a>
+ <button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+ <ul id="links">
+  <li><a href="#about">About</a></li><li><a href="#experience">Education &amp; Teaching</a></li>
+  <li><a href="#publications">Publications</a></li><li><a href="#projects">Projects</a></li>
+  <li><a href="#skills">Skills</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li>
+ </ul>
+</div></nav>
 
-    <header>
-        <nav class="container">
-            <a href="#about" class="logo">Snaholata Mondal</a>
-            <ul>
-                <li><a href="#about">Profile</a></li>
-                <li><a href="#experience">Education & Teaching</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="hero" id="top"><div class="wrap">
+ <div>
+  <h1>Snaholata Mondal</h1>
+  <div class="role">Lecturer in Computer Science and Engineering, IUBAT</div>
+  <p>I teach computer science and research AI for healthcare and security. My M.Sc. thesis at MIST develops an edge-aware deep learning framework with boundary-context interaction for skin lesion segmentation.</p>
+  <div class="links">
+   <a class="btn main" href="https://docs.google.com/document/d/1XZBpHVOXIq50Jg9jh1WgaRRMBDFhobRTPZqUY_GawnM/edit?usp=sharing">Download full CV</a>
+   <a class="btn" href="mailto:snaholata.cse@iubat.edu">Email</a>
+   <a class="btn" href="https://www.linkedin.com/in/snaholata-m/">LinkedIn</a>
+   <a class="btn" href="https://scholar.google.com/citations?user=G4Uaq7oAAAAJ&hl=en">Google Scholar</a>
+  </div>
+  <div class="tags" style="margin-top:20px"><span class="tag">Healthcare AI</span><span class="tag">Privacy-Preserving AI</span><span class="tag">Cyber Security</span><span class="tag">IoT</span><span class="tag">Explainable AI</span></div>
+  <div class="stats"><div><b>45</b>citations</div><div><b>4</b>h-index</div><div><b id="pubcount">24</b>papers and manuscripts</div></div>
+ </div>
+ <div class="scan" aria-hidden="true">
+  <svg viewBox="0 0 400 400">
+   <circle cx="200" cy="200" r="190" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+   <path class="mask" d="M200 62c58-6 112 34 120 92 8 56-28 118-92 134-62 15-128-22-138-84-9-58 26-134 110-142z"/>
+  </svg>
+  <img src="Snaholata Mondal.jpg" alt="Snaholata Mondal" onerror="this.remove()">
+ </div>
+</div></header>
 
-    <main class="container">
+<section id="about"><div class="wrap">
+ <h2>About</h2>
+ <p style="max-width:68ch">I am a lecturer and researcher in Computer Science and Engineering. My work applies machine learning and deep learning to healthcare problems such as heart disease, kidney disease, dyslipidemia, and skin lesion segmentation. I also work on privacy-preserving federated learning for IoT and network security. I supervise undergraduate research and advise students on academics and career planning.</p>
+</div></section>
 
-        <section id="about">
-            <img src="Snaholata Mondal.jpg" alt="Snaholata Mondal - Profile Picture" class="profile-pic">
-            <div class="content">
-                <h1>Snaholata Mondal</h1>
-                <p style="font-family: var(--font-serif); font-style: italic; color: #555;">Lecturer in Computer Science and Engineering | IUBAT</p>
-                <p>An academic researcher and educator focused on expanding boundaries in Computer Science and Engineering. Deeply focused in healthcare-driven computing, deep learning, and intelligent architectures. Actively exploring enhanced medical image segmentation and framework dependability optimization.</p>
-                <div class="contact-info">
-                    <a href="mailto:snaholata.cse@iubat.edu">Email</a> | 
-                    <a href="https://www.linkedin.com/in/snaholata-m/" target="_blank">LinkedIn</a> | 
-                    <a href="https://scholar.google.com/citations?user=G4Uaq7oAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                </div>
-                <p>
-                    <a href="https://docs.google.com/document/d/1XZBpHVOXIq50Jg9jh1WgaRRMBDFhobRTPZqUY_GawnM/edit?usp=sharing" class="cta-button">DOWNLOAD FULL CV</a>
-                </p>
-            </div>
-        </section>
+<section id="experience"><div class="wrap">
+ <h2>Education &amp; Teaching</h2>
+ <div class="card">
+  <h3>Lecturer, Department of CSE</h3>
+  <div class="meta">International University of Business Agriculture and Technology (IUBAT) | August 2023 to present</div>
+  <ul style="margin:0;padding-left:20px"><li>Teach Operating Systems, Database Management Systems, and Software Engineering.</li><li>Supervise undergraduate research works.</li><li>Advise students on academics and career planning.</li></ul>
+  <div class="tags"><span class="tag">Operating Systems</span><span class="tag">Electronic Design and Analysis</span><span class="tag">Database Management Systems</span><span class="tag">System Analysis and Design</span><span class="tag">Software Engineering</span></div>
+ </div>
+ <div class="two">
+  <div class="card"><h3>M.Sc. in CSE</h3><div class="meta">Military Institute of Science and Technology (MIST) | April 2025 to present</div>
+   <p style="margin:0">CGPA 3.83/4.00 (last semester 4.00). Thesis: <em>An Edge-Aware Deep Learning Framework with Boundary-Context Interaction for Skin Lesion Segmentation.</em></p></div>
+  <div class="card"><h3>B.Sc. in CSE</h3><div class="meta">Chittagong University of Engineering and Technology (CUET) | Completed May 2023</div>
+   <p style="margin:0">CGPA 3.75/4.00 (last semester 3.95/4.00).</p></div>
+ </div>
+<div class="card" style="margin-top:16px"><h3>Extra-curricular</h3><div class="meta">Joint General Secretary, CUET Computer Club | May 2022 to May 2023</div></div>
+</div></section>
 
-        <section id="experience">
-            <h2>Education & Teaching Experience</h2>
-            
-            <h3>Teaching Experience</h3>
-            <div class="item-card">
-                <h3>Lecturer, Department of Computer Science and Engineering</h3>
-                <span class="meta">International University of Business Agriculture and Technology (IUBAT) | August 2023 &mdash; Present</span>
-                <p><strong>Courses Taught:</strong></p>
-                <p class="tags">
-                    <a href="#">Electronics Analysis and Design</a>
-                    <a href="#">System Analysis and Design</a>
-                    <a href="#">Operating Systems</a>
-                    <a href="#">Database Management Systems</a>
-                    <a href="#">Software Engineering</a>
-                </p>
-                <ul>
-                    <li>Supervise undergraduate thesis tracks and technical research projects.</li>
-                    <li>Provide ongoing guidance on career tracks, academic milestones, and semester choices.</li>
-                </ul>
-            </div>
+<section id="publications"><div class="wrap">
+ <h2>Publications</h2>
+ <div class="filters" role="group" aria-label="Filter publications"></div>
+ <div id="publist"></div>
+</div></section>
 
-            <h3>Academic Background</h3>
-            <div class="item-card">
-                <h3>M.Sc. in Computer Science and Engineering</h3>
-                <span class="meta">Military Institute of Science and Technology (MIST) | CGPA: 3.83/4.00 (Last Semester: 4.00/4.00) | April 2025 &mdash; Ongoing</span>
-                <p><strong>Thesis:</strong> <em>ADVANCED DEEP LEARNING TECHNIQUES FOR SKIN LESION SEGMENTATION: AN EDGE-AWARE MULTI-AXIAL MAMBA APPROACH</em></p>
-            </div>
+<section id="projects"><div class="wrap">
+ <h2>Academic Projects</h2>
+ <div class="two" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+  <div class="card"><h3>Real-Time Sudoku Solver (2022)</h3><p>Captures a puzzle from a webcam, detects digits with image processing, solves it by backtracking, and overlays the answer on the live image.</p><div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">NumPy</span></div></div>
+  <div class="card"><h3>Flash Chat</h3><p>A messenger app with real-time messaging, Firebase login, and Cloud Firestore storage and sync.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div></div>
+  <div class="card"><h3>ShuvoBibaho</h3><p>A wedding management site where users find and book venues, coordinate vendors, and organize event services.</p><div class="tags"><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span></div></div>
+ </div>
+</div></section>
 
-            <div class="item-card">
-                <h3>B.Sc. in Computer Science and Engineering</h3>
-                <span class="meta">Chittagong University of Engineering and Technology (CUET) | CGPA: 3.75/4.00 (Last Semester: 3.95/4.00) | Completed: May 2023</span>
-            </div>
-            
-            <h3>Leadership & Activities</h3>
-            <div class="item-card">
-                <h3>Joint General Secretary</h3>
-                <span class="meta">CUET Computer Club | May 2022 &mdash; May 2023</span>
-            </div>
-        </section>
+<section id="skills"><div class="wrap">
+ <h2>Technical Skills</h2>
+ <div class="skills">
+  <div class="card"><h3>Languages and databases</h3><div class="tags"><span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">Java</span><span class="tag">Dart</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">SQL (MySQL)</span></div></div>
+  <div class="card"><h3>Frameworks and libraries</h3><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Scikit-learn</span><span class="tag">Flutter</span><span class="tag">Firebase</span></div></div>
+  <div class="card"><h3>Data science</h3><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">PIL</span><span class="tag">Oversampling techniques</span></div></div>
+  <div class="card"><h3>Hardware</h3><div class="tags"><span class="tag">ESP32</span><span class="tag">Intel 5300 WiFi NIC</span></div></div>
+  <div class="card"><h3>Documentation and tools</h3><div class="tags"><span class="tag">LaTeX</span><span class="tag">Git</span><span class="tag">GitHub/GitLab</span><span class="tag">Jupyter</span></div></div>
+ </div>
+</div></section>
 
-        <section id="publications">
-            <h2>Research & Publications</h2>
-            <p style="margin-bottom: 25px; font-style: italic; color: #555;">Track Record: 42 Citations | h-index: 4 (Google Scholar)</p>
+<section id="certifications"><div class="wrap">
+ <h2>Certifications</h2>
+ <div class="card"><h3>Coursera</h3><div class="tags"><span class="tag">Machine Learning Foundations: A Case Study Approach</span><span class="tag">Python Data Structures</span><span class="tag">AI for Everyone</span><span class="tag">Introduction and Programming with IoT Boards</span></div></div>
+</div></section>
 
-            <!-- Published -->
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "A Framework to Estimate Classroom Occupancy using WiFi Channel State Information"</h3>
-                <span class="meta">2023 26th International Conference on Computer and Information Technology (ICCIT) | S. Mondal, Asaduzzaman</span>
-                <span class="meta">DOI: 10.1109/ICCIT60459.2023.10441074</span>
-            </div>
+<section id="contact"><div class="wrap">
+ <h2>Contact</h2>
+ <p style="max-width:60ch">I welcome messages about research collaborations, academic panels, and professional opportunities.</p>
+ <p><a href="mailto:snaholata.cse@iubat.edu">snaholata.cse@iubat.edu</a><br><a href="tel:+8801851599870">+880 1851 599870</a><br>78 Narinda Road, Dhaka-1100, Bangladesh</p>
+</div></section>
 
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Multiclass Detection of Misogynistic Bangla Text from YouTube using Transformer-Based Models"</h3>
-                <span class="meta">2025 International Conference on Electrical, Computer and Communication Engineering (ECCE) | S. Mondal, M. S. Alom, M. M. Alum, K. L. S. Sunjida</span>
-                <span class="meta">DOI: 10.1109/ECCE64574.2025.11014024</span>
-            </div>
+<footer><div class="wrap">Curriculum Vitae of Snaholata Mondal. All rights reserved.</div></footer>
 
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Enhanced Heart Disease Prediction Using Advanced Classifiers and Ensemble Learning Techniques"</h3>
-                <span class="meta">2025 International Conference on Electrical, Computer and Communication Engineering (ECCE) | M. S. Alom, S. Mondal, A. Debnath, A. S. M. Shakil Ahamed</span>
-                <span class="meta">DOI: 10.1109/ECCE64574.2025.11013799</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "A Predictive Digital Twin Framework for Industrial Worker Health Monitoring Using Machine Learning"</h3>
-                <span class="meta">2025 28th International Conference on Computer and Information Technology (ICCIT) | M. S. R. Rimon, S. Mondal, F. N. Nur</span>
-                <span class="meta">DOI: 10.1109/ICCIT64551.2025.11491235</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Evaluating the Usability of Ride-Sharing Applications for Semi-Literate Users: A Study in Bangladesh"</h3>
-                <span class="meta">2025 28th International Conference on Computer and Information Technology (ICCIT) | A. Kabir, S. Chowdhury, S. Mondal, F. Amir, M. N. Islam</span>
-                <span class="meta">DOI: 10.1109/ICCIT64551.2025.11491371</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Automated Detection of Religious Aggression in Bengali Social Media: A Comparative Study of Machine Learning, Deep Learning, and Transformer Approaches"</h3>
-                <span class="meta">2026 5th International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE) | A. Rakin, M. I. Ahamed, A. A. Rimi, S. Mondal</span>
-                <span class="meta">DOI: 10.1109/ICECTE69292.2026.11429234</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Sentiment Analysis of YouTube Comments on the Russia Ukraine Conflict: A Comparative Study of Machine Learning and Transformer-Based Approaches"</h3>
-                <span class="meta">2026 5th International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE) | A. B. Rakib, M. M. Alum, O. Haque, S. Mondal</span>
-                <span class="meta">DOI: 10.1109/ICECTE69292.2026.11429242</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-published">Published</span> "Transformer-Based Approaches for Register Identification in Bangla: A Study on Saint and Common Forms"</h3>
-                <span class="meta">2025 IEEE International Women in Engineering (WIE) Conference on Electrical and Computer Engineering (WIECON-ECE) | S. Mazumder, S. J. Mahin, S. Mondal</span>
-                <span class="meta">DOI: 10.1109/WIECON-ECE69386.2025.11525929</span>
-            </div>
-
-            <!-- Accepted -->
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "Enhanced Cardiovascular Disease Prediction Using Advanced Ensemble Learning with Iterative SMOTE and Clinical Feature Engineering"</h3>
-                <span class="meta">Artificial Intelligence & Machine Learning Conference (AIM-2027), Orlando, FL | S. Mondal, T. Mujumder</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "Automated Dermoscopic Skin Lesion Segmentation via Attention-Based U-Net Refinement"</h3>
-                <span class="meta">Taylor & Francis Book Chapter (2026) | S. Mondal, T. M. S. Sazzad</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks"</h3>
-                <span class="meta">IEEE SPICSCON (2026) | S. Mondal, M. J. N. Rakib, F. Muntasir</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "Evaluating ML Model Reliability in Medical Diagnosis with Data Splits and Noise"</h3>
-                <span class="meta">Taylor & Francis Book Chapter (2026) | I. A. Remon, M. F. I. Badhon, S. Mondal</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "Depression Detection from Code-Mixed Bangla-English Social Media Text"</h3>
-                <span class="meta">Taylor & Francis Book Chapter (2026) | I. A. Remon, M. F. I. Badhon, S. Mondal</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-accepted">Accepted</span> "An Empirical Comparative Study of Machine Learning, Deep Learning, and Transformer Models for Bangla Fake News Detection"</h3>
-                <span class="meta">Springer Nature (2026) | D. M. Das, S. Mondal</span>
-            </div>
-
-            <!-- Under Review -->
-            <div class="item-card">
-                <h3><span class="pub-status status-review">Under Review</span> "A HEART Framework-Based Comparative Analysis of UX in Generative and Traditional Search Across Gen Z and Older Adults"</h3>
-                <span class="meta">ICSOB 2026 (17th International Conference on Software Business) | A. Kabir, S. Mondal, N. Azad, M. N. Islam</span>
-            </div>
-
-            <!-- In Progress -->
-            <div class="item-card">
-                <h3><span class="pub-status status-progress">In Progress</span> "Hierarchical Deep Learning for Multiclass Cyber Threat Identification in IoMT"</h3>
-                <span class="meta">Ongoing Research Track | S. Mondal, M. R. Hasan</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-progress">In Progress</span> "A Comparative Study of Mental Health Detection Using PHQ-9 and Social Media Analysis with Traditional ML and NLP Techniques"</h3>
-                <span class="meta">Ongoing Research Track | M. A. I. Aziz, S. Ahmed, S. Mondal</span>
-            </div>
-
-            <div class="item-card">
-                <h3><span class="pub-status status-progress">In Progress</span> "Prediction of Dyslipidemia Among Women of Reproductive Age 15-44 Years Using Machine Learning Models"</h3>
-                <span class="meta">Ongoing Research Track | O. Khan, T. Khan, S. Mondal</span>
-            </div>
-
-        </section>
-        
-        <section id="projects">
-            <h2>Academic Projects</h2>
-
-            <div class="item-card">
-                <h3>Real-Time Sudoku Solver</h3>
-                <span class="meta">Core Technologies: Python, OpenCV, NumPy</span>
-                <p>The AI-based Sudoku solver captures a puzzle from a webcam, uses image processing to detect digits, solves the puzzle using a backtracking algorithm, and overlays the solution on the original image using OpenCV.</p>
-            </div>
-
-            <div class="item-card">
-                <h3>Flash Chat</h3>
-                <span class="meta">Core Technologies: Flutter, Firebase</span>
-                <p>A messenger app incorporating real-time messaging, Firebase Authentication for user login, and Cloud Firestore (NoSQL) for data storage and sync to deliver a responsive chat experience.</p>
-            </div>
-
-            <div class="item-card">
-                <h3>ShuvoBibaho</h3>
-                <span class="meta">Core Technologies: PHP, JavaScript, HTML, CSS, MySQL</span>
-                <p>A web platform for comprehensive wedding management, allowing users to discover and book venues, coordinate vendors, and organize event services with dynamic database queries.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            
-            <div class="item-card">
-                <h3>Languages & Databases</h3>
-                <p class="tags">
-                    <a href="#">Python</a><a href="#">C/C++</a><a href="#">Java</a><a href="#">Dart</a><a href="#">PHP</a><a href="#">JavaScript</a><a href="#">SQL (MySQL)</a>
-                </p>
-            </div>
-
-            <div class="item-card">
-                <h3>Frameworks & Libraries</h3>
-                <p class="tags">
-                    <a href="#">PyTorch</a><a href="#">TensorFlow</a><a href="#">Keras</a><a href="#">OpenCV</a><a href="#">Scikit-learn</a><a href="#">Flutter</a><a href="#">Firebase</a>
-                </p>
-            </div>
-
-            <div class="item-card">
-                <h3>Documentation & Tools</h3>
-                <p class="tags">
-                    <a href="#">LaTeX</a><a href="#">Git</a><a href="#">GitLab/GitHub</a><a href="#">Jupyter Notebook</a>
-                </p>
-            </div>
-
-            <div class="item-card">
-                <h3>Data Science & Analytics</h3>
-                <p class="tags">
-                    <a href="#">Pandas</a><a href="#">NumPy</a><a href="#">Matplotlib</a><a href="#">Seaborn</a><a href="#">PIL</a><a href="#">SMOTE / Data Oversampling</a>
-                </p>
-            </div>
-        </section>
-
-        <section id="contact" style="text-align: center;">
-            <h2>Formal Inquiry</h2>
-            <p>I welcome correspondence regarding collaborative research streams, academic panels, or professional opportunities.</p>
-            <p style="font-size: 1.2em; margin-top: 30px;">
-                Please direct all correspondence to: <a href="mailto:snaholata.cse@iubat.edu" style="font-weight: 700;">snaholata.cse@iubat.edu</a>
-            </p>
-            <p style="color: #777; font-size: 0.9em;">
-                78 Narinda Road, Dhaka-1100, Bangladesh
-            </p>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            Curriculum Vitae of Snaholata Mondal | All Rights Reserved.
-        </div>
-    </footer>
-
+<script>
+const P=[["Published","A Framework to Estimate Classroom Occupancy using WiFi Channel State Information","ICCIT 2023, Cox's Bazar","S. Mondal, Asaduzzaman","10.1109/ICCIT60459.2023.10441074",""],["Published","Enhanced Heart Disease Prediction Using Advanced Classifiers and Ensemble Learning Techniques","ECCE 2025, Chittagong","M. S. Alom, S. Mondal, A. Debnath, A. S. M. Shakil Ahamed","10.1109/ECCE64574.2025.11013799",""],["Published","A Predictive Digital Twin Framework for Industrial Worker Health Monitoring Using Machine Learning","ICCIT 2025, Dhaka","M. S. R. Rimon, S. Mondal, F. N. Nur","10.1109/ICCIT64551.2025.11491235",""],["Published","Evaluating the Usability of Ride-Sharing Applications for Semi-Literate Users: A Study in Bangladesh","ICCIT 2025, Dhaka","A. Kabir, S. Chowdhury, S. Mondal, F. Amir, M. N. Islam","10.1109/ICCIT64551.2025.11491371",""],["Published","Multiclass Detection of Misogynistic Bangla Text from YouTube using Transformer-Based Models","ECCE 2025, Chittagong","S. Mondal, M. S. Alom, M. M. Alum, K. L. S. Sunjida","10.1109/ECCE64574.2025.11014024",""],["Published","Automated Detection of Religious Aggression in Bengali Social Media: A Comparative Study of Machine Learning, Deep Learning, and Transformer Approaches","ICECTE 2026, Rajshahi","A. Rakin, M. I. Ahamed, A. A. Rimi, S. Mondal","10.1109/ICECTE69292.2026.11429234",""],["Published","Sentiment Analysis of YouTube Comments on the Russia Ukraine Conflict: A Comparative Study of Machine Learning and Transformer-Based Approaches","ICECTE 2026, Rajshahi","A. B. Rakib, M. M. Alum, O. Haque, S. Mondal","10.1109/ICECTE69292.2026.11429242",""],["Published","Transformer-Based Approaches for Register Identification in Bangla: A Study on Saint and Common Forms","IEEE WIECON-ECE 2025, Dhaka","S. Mazumder, S. J. Mahin, S. Mondal","10.1109/WIECON-ECE69386.2025.11525929",""],["Accepted","A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks","IEEE SPICSCON 2026","S. Mondal, M. J. N. Rakib, F. Muntasir","",""],["Accepted","Automated Dermoscopic Skin Lesion Segmentation via Attention-Based U-Net Refinement","Taylor & Francis book chapter, 2026","S. Mondal, T. M. S. Sazzad","",""],["Accepted","Metaheuristic Driven Feature Selection for Machine Learning Based Glioma Grading: An Empirical Study","Taylor & Francis book chapter, 2026","D. M. Das, S. Mondal","",""],["Accepted","Evaluating ML Model Reliability in Medical Diagnosis with Data Splits and Noise","Taylor & Francis book chapter, 2026","I. A. Remon, M. F. I. Badhon, S. Mondal","",""],["Accepted","Attention-Enhanced EfficientNet-B3 for Automated Tuberculosis Screening Using Chest Radiographs","IEEE BECITHCON 2026","O. Haque, A. Rakin, A. K. Ghosh, A. B. Rakib, S. Mondal","",""],["Accepted","A Soft-Voting Heterogeneous Ensemble Framework for Pedestrian Evacuation Route Status Classification from Spatiotemporal Trajectory Data","3rd IEEE International Conference on Computing, Applications and Systems","A. A. Alo, N. A. Mahadi, S. Mondal","",""],["Accepted","Depression Detection from Code-Mixed Bangla-English Social Media Text","Taylor & Francis book chapter, 2026","I. A. Remon, M. F. I. Badhon, S. Mondal","",""],["Accepted","An Empirical Comparative Study of Machine Learning, Deep Learning, and Transformer Models for Bangla Fake News Detection","Springer Nature, 2026","D. M. Das, S. Mondal","",""],["Under review","ALPHA-FL: A Loss-Aware Aggregation and Adaptive Personalization Framework for Heterogeneous Federated Learning in IoMT-Based Heart Disease Risk Prediction","ICCIT 2026","S. A. H. Pranto, A. S. Hussein, S. Mondal, M. M. Hasan, M. K. Islam","",""],["Under review","Leakage-Aware Explainable Machine Learning Framework for Chronic Kidney Disease Risk Assessment Using NHANES Clinical Biomarkers","ICCIT 2026","I. Remon, M. F. I. Badhon, S. Mondal, N. H. Nisad, I. Mahmud","",""],["Under review","A Hybrid MLP-Graph Attention Network Framework for Explainable Medical Recommendation","ICCIT 2026","M. M. Hasan, B. Rozario, S. Mondal","",""],["Under review","A HEART Framework-Based Comparative Analysis of UX in Generative and Traditional Search Across Gen Z and Older Adults","ICCIT 2026","A. Kabir, S. Mondal, N. Azad, M. N. Islam","",""],["In progress","Enhanced Cardiovascular Disease Prediction Using Advanced Ensemble Learning with Iterative SMOTE and Clinical Feature Engineering","Manuscript in progress","S. Mondal, T. Mujumder","","A study of ensemble ML models with iterative SMOTE and clinical feature engineering."],["In progress","Federated Graph Learning for Secure and Privacy-Preserving Intrusion Detection in IoMT Networks","Manuscript in progress","S. Mondal, M. R. Hasan","","A hierarchical deep learning framework to detect multiclass cyber threats in the Internet of Medical Things."],["In progress","Explainable Machine Learning for Lipid-Panel-Free Dyslipidemia Risk Screening in Reproductive-Age Women: An NHANES 2017-2018 Study","Manuscript in progress","O. Khan, S. Mondal","","Determines the prevalence of dyslipidemia in reproductive-age women."],["In progress","A Comparative Study of Mental Health Detection Using PHQ-9 and Social Media Analysis with Traditional ML and NLP Techniques","Manuscript in progress","M. A. I. Aziz, S. Ahmed, S. Mondal","","Compares ML models on PHQ-9 survey data against NLP techniques on Bangla Facebook posts."]];
+const list=document.getElementById('publist'),bar=document.querySelector('.filters');
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function show(f){
+ bar.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));
+ list.innerHTML=P.filter(p=>f==='All'||p[0]===f).map(p=>`<article class="pub"><div class="status ${p[0].split(' ')[0]}">${p[0]}</div><div><h3>${esc(p[1])}</h3><p>${esc(p[3])}</p><p>${esc(p[2])}${p[4]?` | <a href="https://doi.org/${p[4]}">DOI</a>`:''}</p>${p[5]?`<p>${esc(p[5])}</p>`:''}</div></article>`).join('');
+}
+['All','Published','Accepted','Under review','In progress'].forEach(f=>{
+ const b=document.createElement('button');b.textContent=f;b.dataset.f=f;b.onclick=()=>show(f);bar.appendChild(b);
+});
+document.getElementById('pubcount').textContent=P.length;
+show('All');
+const m=document.getElementById('menu'),l=document.getElementById('links');
+m.onclick=()=>m.setAttribute('aria-expanded',l.classList.toggle('open'));
+l.onclick=e=>{if(e.target.tagName==='A'){l.classList.remove('open');m.setAttribute('aria-expanded','false')}};
+</script>
 </body>
 </html>
